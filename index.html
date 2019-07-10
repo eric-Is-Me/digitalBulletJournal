@@ -13,22 +13,46 @@
 		<div class="bar3"></div>
 	</div>
 	<a href="#" class="logo">journalr</a>
-	<ul class="main-nav" id="menu">
+	<ul class="mainNav" id="menu">
 		<li>
-			<a href="#" class="nav-links">Home</a>
+			<a href="#" class="navLinks">Home</a>
 		</li>
 
 		<li>
-			<a href="#" class="nav-links">Upload</a>
+			<input type="button" id="get_file" value="Upload" onclick="uploadFunction()">
+			<input type="file" id="my_file">
 		</li>
 
 		<li>
-			<a href="#" class="nav-links">Explore</a>
+			<a href="#" class="navLinks">Explore</a>
 		</li>
 	</ul>
+
 </nav>
 <body>
 
-</body>
 <script src="scripts.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+	// Your web app's Firebase configuration
+	var firebaseConfig = {
+	apiKey: "AIzaSyCQvhU848xtvCjyIsDTDBJYQbE_7zYMzI0",
+	authDomain: "journalr-8a9bd.firebaseapp.com",
+	databaseURL: "https://journalr-8a9bd.firebaseio.com",
+	projectId: "journalr-8a9bd",
+	storageBucket: "",
+	messagingSenderId: "484355063780",
+	appId: "1:484355063780:web:dbada4a4c344051d"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	const storageService = firebase.storage();
+	const storageRef = storageService.ref();
+</script>
+</body>
 </html>

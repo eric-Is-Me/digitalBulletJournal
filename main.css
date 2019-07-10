@@ -13,12 +13,12 @@ body {
 	background-color: black;
 }
 
-.main-nav {
+.mainNav {
 	list-style-type: none;
 	display: none;
 }
 
-.main-nav li {
+.mainNav li {
 	text-align: center;
 	margin: 15px auto;
 }
@@ -30,7 +30,7 @@ body {
 	margin-left: 20px;
 }
 
-.nav-links {
+.navLinks {
 	text-decoration: none;
 	color: rgb(255,255,255);
 }
@@ -90,31 +90,39 @@ body {
 		align-items: center;
 	}
 
-	.main-nav {
+	.mainNav {
 		display: flex;
 		margin-right: 30px;
 		flex-direction: row;
 		justify-content: flex-end;
 	}
 
-	.main-nav li {
+	.mainNav li {
 		margin: 0;
 	}
 
-	.nav-links {
+	.navLinks {
 		margin-left: 40px;
 	}
 
+	#my_file {
+	    display: none;
+	}
+
+	#get_file {
+	    background: black;
+	    margin-left: 40px;
+	    border: none;
+	    font-family: inherit;
+	    font-size: inherit;
+	    color: white;
+	    cursor: pointer;
+	}
 	.logo {
 		margin-top: 0;
 	}
 
 	.hamburgerMenu {
 		display: none;
-	}
-
-	.logo:hover,
-	.nav-links:hover {
-		color: rgba(255,255,255,1);
 	}
 }
