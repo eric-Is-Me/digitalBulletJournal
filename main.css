@@ -10,11 +10,12 @@ body {
 
 .navbar {
 	font-size: 18px;
-	background-color: white;
+	background-color: black;
 }
 
 .main-nav {
 	list-style-type: none;
+	display: none;
 }
 
 .main-nav li {
@@ -29,22 +30,31 @@ body {
 	margin-left: 20px;
 }
 
-.nav-links,
-.logo {
+.nav-links {
 	text-decoration: none;
-	color: rgb(0,0,0);
+	color: rgb(255,255,255);
+}
+
+.logo {
+	font-family: 'Marck Script', cursive;
+	font-size: 4vw;
+	color: rgb(255,255,255);
 }
 
 /* Menu icon css */
 .hamburgerMenu {
   display: inline-block;
   cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
 }
 
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
-  background-color: #333;
+  background-color: white;
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -64,4 +74,47 @@ body {
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
   transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/* Show menu items */
+.active {
+	display: block;
+}
+
+@media screen and (min-width: 768px) {
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 0;
+		height: 70px;
+		align-items: center;
+	}
+
+	.main-nav {
+		display: flex;
+		margin-right: 30px;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+
+	.main-nav li {
+		margin: 0;
+	}
+
+	.nav-links {
+		margin-left: 40px;
+	}
+
+	.logo {
+		margin-top: 0;
+	}
+
+	.hamburgerMenu {
+		display: none;
+	}
+
+	.logo:hover,
+	.nav-links:hover {
+		color: rgba(255,255,255,1);
+	}
 }
