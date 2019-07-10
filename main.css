@@ -10,7 +10,7 @@ body {
 
 .navbar {
 	font-size: 18px;
-	background-color: black;
+	background-color: rgb(233, 233, 233);
 }
 
 .mainNav {
@@ -32,13 +32,13 @@ body {
 
 .navLinks {
 	text-decoration: none;
-	color: rgb(255,255,255);
+	color: black;
 }
 
 .logo {
 	font-family: 'Marck Script', cursive;
 	font-size: 4vw;
-	color: rgb(255,255,255);
+	color: black;
 }
 
 /* Menu icon css */
@@ -105,17 +105,17 @@ body {
 		margin-left: 40px;
 	}
 
-	#my_file {
+	#upFile {
 	    display: none;
 	}
 
-	#get_file {
-	    background: black;
+	#upButton {
+	    background: rgb(233, 233, 233);
 	    margin-left: 40px;
 	    border: none;
 	    font-family: inherit;
 	    font-size: inherit;
-	    color: white;
+	    color: black;
 	    cursor: pointer;
 	}
 	.logo {
@@ -125,4 +125,41 @@ body {
 	.hamburgerMenu {
 		display: none;
 	}
+
+	/* Image grid css */
+	.row {
+		display: flex;
+		background-color: black;
+		flex-wrap: wrap;
+		padding: 0 4px;
+	}
+
+	/* Create four equal columns that sits next to each other */
+	.column {
+		flex: 25%;
+		max-width: 25%;
+		padding: 0 4px;
+	}
+
+	.column img {
+		margin-top: 8px;
+		vertical-align: middle;
+		width: 100%;
+	}
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+	.column {
+		flex: 50%;
+		max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+	.column {
+		flex: 100%;
+		max-width: 100%;
+  }
 }

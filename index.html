@@ -19,8 +19,8 @@
 		</li>
 
 		<li>
-			<input type="button" id="get_file" value="Upload" onclick="uploadFunction()">
-			<input type="file" id="my_file">
+			<input type="button" id="upButton" value="Upload" onclick="uploadFunction()">
+			<input type="file" id="upFile">
 		</li>
 
 		<li>
@@ -29,30 +29,69 @@
 	</ul>
 
 </nav>
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column" id="one">
+    <img src="https://www.w3schools.com//w3images/wedding.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/rocks.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/falls2.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/paris.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/nature.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/mist.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/paris.jpg" style="width:100%">
+  </div>
+  <div class="column" id="two">
+    <img src="https://www.w3schools.com//w3images/underwater.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/ocean.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/wedding.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/mountainskies.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/rocks.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/underwater.jpg" style="width:100%">
+  </div>  
+  <div class="column" id="three">
+    <img src="https://www.w3schools.com//w3images/wedding.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/rocks.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/falls2.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/paris.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/nature.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/mist.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/paris.jpg" style="width:100%">
+  </div>
+  <div class="column" id="four">
+    <img src="https://www.w3schools.com//w3images/underwater.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/ocean.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/wedding.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/mountainskies.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/rocks.jpg" style="width:100%">
+    <img src="https://www.w3schools.com//w3images/underwater.jpg" style="width:100%">
+  </div>
+</div>
 <body>
 
-<script src="scripts.js"></script>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
-
+<!-- Firebase storage JS SKD is required to use the storage functions and capabilities -->
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-storage.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
 
 <script>
 	// Your web app's Firebase configuration
 	var firebaseConfig = {
-	apiKey: "AIzaSyCQvhU848xtvCjyIsDTDBJYQbE_7zYMzI0",
-	authDomain: "journalr-8a9bd.firebaseapp.com",
-	databaseURL: "https://journalr-8a9bd.firebaseio.com",
-	projectId: "journalr-8a9bd",
-	storageBucket: "",
-	messagingSenderId: "484355063780",
-	appId: "1:484355063780:web:dbada4a4c344051d"
+		apiKey: "AIzaSyCQvhU848xtvCjyIsDTDBJYQbE_7zYMzI0",
+		authDomain: "journalr-8a9bd.firebaseapp.com",
+		databaseURL: "https://journalr-8a9bd.firebaseio.com",
+		projectId: "journalr-8a9bd",
+		storageBucket: "gs://journalr-8a9bd.appspot.com/",
+		messagingSenderId: "484355063780",
+		appId: "1:484355063780:web:dbada4a4c344051d"
 	};
 	// Initialize Firebase
 	firebase.initializeApp(firebaseConfig);
 	const storageService = firebase.storage();
 	const storageRef = storageService.ref();
 </script>
+
+<script src="scripts.js"></script>
 </body>
 </html>
