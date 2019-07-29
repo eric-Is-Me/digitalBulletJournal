@@ -23,13 +23,6 @@ body {
 	margin: 15px auto;
 }
 
-.logo {
-	display: inline-block;
-	font-size: 22px;
-	margin-top: 10px;
-	margin-left: 20px;
-}
-
 .navLinks {
 	text-decoration: none;
 	color: black;
@@ -39,6 +32,9 @@ body {
 	font-family: 'Marck Script', cursive;
 	font-size: 4vw;
 	color: black;
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 20px;
 }
 
 /* Menu icon css */
