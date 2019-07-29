@@ -9,8 +9,10 @@ body {
 }
 
 .navbar {
-	font-size: 18px;
+	width: 100vw;
+	height: 10vw;
 	background-color: rgb(233, 233, 233);
+	position: fixed;
 }
 
 .mainNav {
@@ -19,8 +21,19 @@ body {
 }
 
 .mainNav li {
+	font-size: 125%;
 	text-align: center;
-	margin: 15px auto;
+	margin: 0px auto 10px auto;
+
+}
+						
+.logo {
+	display: inline-block;
+	font-family: 'Marck Script', cursive;
+	font-size: 4vw;
+	color: black;
+	margin-top: 1vh;
+	margin-left: 20px;
 }
 
 .navLinks {
@@ -28,37 +41,31 @@ body {
 	color: black;
 }
 
-.logo {
-	font-family: 'Marck Script', cursive;
-	font-size: 4vw;
-	color: black;
-	display: inline-block;
-	margin-top: 10px;
-	margin-left: 20px;
+.content {
+	padding-top: 10vw;
 }
 
 /* Menu icon css */
 .hamburgerMenu {
   display: inline-block;
   cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 24px;
+  float: right;
+  padding-right: 20px;
+  padding-top: 1vh;
 }
 
 .bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: white;
-  margin: 6px 0;
+  width: 6vw;
+  height: 1vw;
+  background-color: black;
+  margin: 4px 0;
   transition: 0.4s;
 }
 
 /* Rotate first bar */
 .change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-  transform: rotate(-45deg) translate(-9px, 6px) ;
+  -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+  transform: rotate(-45deg) translate(-8px, 6px);
 }
 
 /* Fade out the second bar */
@@ -68,13 +75,14 @@ body {
 
 /* Rotate last bar */
 .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-  transform: rotate(45deg) translate(-8px, -8px) ;
+  -webkit-transform: rotate(45deg) translate(-4px, -5px);
+  transform: rotate(45deg) translate(-4px, -5px);
 }
 
 /* Show menu items */
 .active {
 	display: block;
+	background-color: rgb(233, 233, 233);
 }
 
 @media screen and (min-width: 768px) {
@@ -101,6 +109,10 @@ body {
 		margin-left: 40px;
 	}
 
+	.content {
+		padding-top: 70px;
+	}
+
 	#upFile {
 	    display: none;
 	}
@@ -113,9 +125,6 @@ body {
 	    font-size: inherit;
 	    color: black;
 	    cursor: pointer;
-	}
-	.logo {
-		margin-top: 0;
 	}
 
 	.hamburgerMenu {
@@ -142,6 +151,15 @@ body {
 		vertical-align: middle;
 		width: 100%;
 	}
+
+	img {
+		transition: all .18s ease-in-out;
+	}
+
+	img:hover {
+		box-shadow: 2px 8px 18px 5px rgba(255,255,255,0.3);
+		transform: scale(1.01, 1.01);
+	}
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -149,7 +167,10 @@ body {
 	.column {
 		flex: 50%;
 		max-width: 50%;
-  }
+  	}
+  	.row {
+  		background-color: black;
+  	}
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -157,5 +178,14 @@ body {
 	.column {
 		flex: 100%;
 		max-width: 100%;
-  }
+	}
+  	.row {
+		display: flex;
+		background-color: black;
+		flex-wrap: wrap;
+		padding: 4px 4px;
+  	}
+  	.logo {
+  		font-size: 6vw;
+  	}
 }
