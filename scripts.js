@@ -1,6 +1,6 @@
 let mainNav = document.getElementById('menu');
 let selectedFile = null;
-alert("hello");
+
 function changeMenu(x) {
   x.classList.toggle('change');
   mainNav.classList.toggle('active');
@@ -21,6 +21,11 @@ function handleFileUploadChange(e) {
 	}, () => {
 	 // Do something once upload is complete
 	 console.log('success');
+
+	 var imgSource = storageRef.child('images/'+selectedFile.name).getDownloadURL();
+	 var newImg = document.createElement("IMG");
+	 newImg.setAttribute("src", imgSource);
+	 document.getElementById('one').appendChild(newImg);
 	});
 };
 
