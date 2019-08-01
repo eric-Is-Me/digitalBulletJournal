@@ -1,6 +1,6 @@
 let mainNav = document.getElementById('menu');
 let selectedFile = null;
-
+alert("hello");
 function changeMenu(x) {
   x.classList.toggle('change');
   mainNav.classList.toggle('active');
@@ -12,7 +12,8 @@ function uploadFunction() {
 
 function handleFileUploadChange(e) {
 	selectedFile = e.target.files[0];
-	const uploadTask = storageRef.child('images/${selectedFile.name}').put(selectedFile);
+	alert(selectedFile.name);
+	const uploadTask = storageRef.child('images/'+selectedFile.name).put(selectedFile);
 
 	uploadTask.on('state_changed', (error) => {
 	// Handle unsuccessful uploads
